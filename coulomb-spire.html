@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Laika 0.18.1 + Helium Theme" />
+    <title>coulomb-spire</title>
+    
+      <meta name="author" content="Erik Erlandson"/>
+    
+    
+      <meta name="description" content="docs"/>
+    
+    
+      <link rel="icon" sizes="32x32" type="image/png" href="https://typelevel.org/img/favicon.png"/>
+    
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css">
+    
+    <link rel="stylesheet" type="text/css" href="helium/icofont.min.css" />
+    <link rel="stylesheet" type="text/css" href="helium/laika-helium.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="site/styles.css" />
+    <script src="helium/laika-helium.js"></script>
+    
+    
+    <script> /* for avoiding page load transitions */ </script>
+  </head>
+
+  <body>
+
+    <header id="top-bar">
+
+      <div class="row">
+        <a id="nav-icon">
+          <i class="icofont-laika" title="Navigation">&#xefa2;</i>
+        </a>
+        
+      </div>
+
+      <a class="image-link" href="https://typelevel.org"><img src="https://typelevel.org/img/logo.svg"></a>
+
+      <span class="row links"><a class="icon-link svg-link" href="https://github.com/scala-steward/coulomb"><span title="Source Code"><svg class="svg-icon" width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+  <g class="svg-shape">
+    <path d="M49.995,1c-27.609,-0 -49.995,22.386 -49.995,50.002c-0,22.09 14.325,40.83 34.194,47.444c2.501,0.458 3.413,-1.086 3.413,-2.412c0,-1.185 -0.043,-4.331 -0.067,-8.503c-13.908,3.021 -16.843,-6.704 -16.843,-6.704c-2.274,-5.773 -5.552,-7.311 -5.552,-7.311c-4.54,-3.103 0.344,-3.042 0.344,-3.042c5.018,0.356 7.658,5.154 7.658,5.154c4.46,7.64 11.704,5.433 14.552,4.156c0.454,-3.232 1.744,-5.436 3.174,-6.685c-11.102,-1.262 -22.775,-5.553 -22.775,-24.713c-0,-5.457 1.949,-9.92 5.147,-13.416c-0.516,-1.265 -2.231,-6.348 0.488,-13.233c0,0 4.199,-1.344 13.751,5.126c3.988,-1.108 8.266,-1.663 12.518,-1.682c4.245,0.019 8.523,0.574 12.517,1.682c9.546,-6.47 13.736,-5.126 13.736,-5.126c2.728,6.885 1.013,11.968 0.497,13.233c3.204,3.496 5.141,7.959 5.141,13.416c0,19.209 -11.691,23.436 -22.83,24.673c1.795,1.544 3.394,4.595 3.394,9.26c0,6.682 -0.061,12.076 -0.061,13.715c0,1.338 0.899,2.894 3.438,2.406c19.853,-6.627 34.166,-25.354 34.166,-47.438c-0,-27.616 -22.389,-50.002 -50.005,-50.002"/>
+  </g>
+</svg></span></a><a class="icon-link" href="https://discord.gg/XF3CXcMzqD"><i class="icofont-laika" title="Chat">&#xeed5;</i></a><a class="icon-link" href="https://twitter.com/typelevel"><i class="icofont-laika" title="Twitter">&#xed7a;</i></a></span>
+
+    </header>
+
+    <nav id="sidebar">
+
+      <div class="row">
+        <a class="icon-link svg-link" href="https://github.com/scala-steward/coulomb"><span title="Source Code"><svg class="svg-icon" width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+  <g class="svg-shape">
+    <path d="M49.995,1c-27.609,-0 -49.995,22.386 -49.995,50.002c-0,22.09 14.325,40.83 34.194,47.444c2.501,0.458 3.413,-1.086 3.413,-2.412c0,-1.185 -0.043,-4.331 -0.067,-8.503c-13.908,3.021 -16.843,-6.704 -16.843,-6.704c-2.274,-5.773 -5.552,-7.311 -5.552,-7.311c-4.54,-3.103 0.344,-3.042 0.344,-3.042c5.018,0.356 7.658,5.154 7.658,5.154c4.46,7.64 11.704,5.433 14.552,4.156c0.454,-3.232 1.744,-5.436 3.174,-6.685c-11.102,-1.262 -22.775,-5.553 -22.775,-24.713c-0,-5.457 1.949,-9.92 5.147,-13.416c-0.516,-1.265 -2.231,-6.348 0.488,-13.233c0,0 4.199,-1.344 13.751,5.126c3.988,-1.108 8.266,-1.663 12.518,-1.682c4.245,0.019 8.523,0.574 12.517,1.682c9.546,-6.47 13.736,-5.126 13.736,-5.126c2.728,6.885 1.013,11.968 0.497,13.233c3.204,3.496 5.141,7.959 5.141,13.416c0,19.209 -11.691,23.436 -22.83,24.673c1.795,1.544 3.394,4.595 3.394,9.26c0,6.682 -0.061,12.076 -0.061,13.715c0,1.338 0.899,2.894 3.438,2.406c19.853,-6.627 34.166,-25.354 34.166,-47.438c-0,-27.616 -22.389,-50.002 -50.005,-50.002"/>
+  </g>
+</svg></span></a><a class="icon-link" href="https://discord.gg/XF3CXcMzqD"><i class="icofont-laika" title="Chat">&#xeed5;</i></a><a class="icon-link" href="https://twitter.com/typelevel"><i class="icofont-laika" title="Twitter">&#xed7a;</i></a>
+      </div>
+
+      <ul class="nav-list">
+        <li class="level1"><a href="index.html">Introduction to coulomb</a></li>
+        <li class="level1"><a href="concepts.html">coulomb Concepts</a></li>
+        <li class="level1"><a href="coulomb-units.html">coulomb-units</a></li>
+        <li class="level1 active"><a href="#">coulomb-spire</a></li>
+      </ul>
+
+      <ul class="nav-list">
+        <li class="level1 nav-header">Related Projects</li>
+        
+          <li class="level2"><a href="https://typelevel.org/cats/">cats</a></li>
+        
+      </ul>
+
+    </nav>
+
+    <div id="container">
+
+      <nav id="page-nav">
+        <p class="header"><a href="#">coulomb-spire</a></p>
+
+        <ul class="nav-list">
+          <li class="level1"><a href="#quick-start">Quick Start</a></li>
+          <li class="level2"><a href="#documentation">documentation</a></li>
+          <li class="level2"><a href="#packages">packages</a></li>
+          <li class="level2"><a href="#import">import</a></li>
+          <li class="level2"><a href="#examples">examples</a></li>
+          <li class="level1"><a href="#policies">Policies</a></li>
+        </ul>
+
+        <p class="footer"></p>
+      </nav>
+
+      <main class="content">
+
+        <h1 id="coulomb-spire" class="title">coulomb-spire</h1>
+        <p>The <code>coulomb-spire</code> package defines unit conversion, value conversion,
+        and value resolution
+        <a href="concepts.html#coulomb-policies">policies</a>
+        for
+        <a href="https://typelevel.org/spire/">spire</a>
+        numeric types (and standard Scala numeric types).</p>
+        <p>The following numeric types are supported:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Value Type</th>
+              <th>Defined In</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Int</td>
+              <td>Scala</td>
+            </tr>
+            <tr>
+              <td>Long</td>
+              <td>Scala</td>
+            </tr>
+            <tr>
+              <td>Float</td>
+              <td>Scala</td>
+            </tr>
+            <tr>
+              <td>Double</td>
+              <td>Scala</td>
+            </tr>
+            <tr>
+              <td>BigInt</td>
+              <td>Scala</td>
+            </tr>
+            <tr>
+              <td>BigDecimal</td>
+              <td>Scala</td>
+            </tr>
+            <tr>
+              <td>Rational</td>
+              <td>Spire</td>
+            </tr>
+            <tr>
+              <td>Algebraic</td>
+              <td>Spire</td>
+            </tr>
+            <tr>
+              <td>Real</td>
+              <td>Spire</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="callout info">
+          <i class="icofont-laika">&#xef4e;</i>
+          <p>You may notice that <code>BigInt</code> and <code>BigDecimal</code> are not supported in <code>coulomb-core</code>,
+          even though they are Scala native types.
+          This is because Scala&#39;s native numeric typeclasses do not uniformly treat the
+          core types <code>Int, Long, Float, Double</code> the same as <code>BigInt</code> and <code>BigDecimal</code>,
+          while spire&#39;s typeclasses do.
+          For this reason, it is much easier to support <code>BigInt</code> and <code>BigDecimal</code> as part of
+          the <code>coulomb-spire</code> package.</p>
+        </div>
+        
+        <h2 id="quick-start" class="section">Quick Start<a class="anchor-link right" href="#quick-start"><i class="icofont-laika">&#xef71;</i></a></h2>
+        
+        <h3 id="documentation" class="section">documentation<a class="anchor-link right" href="#documentation"><i class="icofont-laika">&#xef71;</i></a></h3>
+        <p>You can browse the <code>coulomb-spire</code> policies
+        <a href="https://www.javadoc.io/doc/com.manyangled/coulomb-docs_3/latest/coulomb/policy/spire.html">here</a>.</p>
+        
+        <h3 id="packages" class="section">packages<a class="anchor-link right" href="#packages"><i class="icofont-laika">&#xef71;</i></a></h3>
+        <p>Include <code>coulomb-spire</code> with your Scala project:</p>
+        <pre class="keep-together pdf epub"><code class="nohighlight"><span class="identifier">libraryDependencies</span><span> += </span><span class="string-literal">&quot;com.manyangled&quot;</span><span> %% </span><span class="string-literal">&quot;coulomb-core&quot;</span><span> % </span><span class="string-literal">&quot;0.6-81ffa8f-SNAPSHOT&quot;</span><span>
+</span><span class="identifier">libraryDependencies</span><span> += </span><span class="string-literal">&quot;com.manyangled&quot;</span><span> %% </span><span class="string-literal">&quot;coulomb-spire&quot;</span><span> % </span><span class="string-literal">&quot;0.6-81ffa8f-SNAPSHOT&quot;</span></code></pre>
+        <div class="callout info">
+          <i class="icofont-laika">&#xef4e;</i>
+          <p>To use coulomb unit definitions:</p>
+          <pre class="keep-together pdf epub"><code class="nohighlight"><span class="identifier">libraryDependencies</span><span> += </span><span class="string-literal">&quot;com.manyangled&quot;</span><span> %% </span><span class="string-literal">&quot;coulomb-units&quot;</span><span> % </span><span class="string-literal">&quot;0.6-81ffa8f-SNAPSHOT&quot;</span></code></pre>
+        </div>
+        
+        <h3 id="import" class="section">import<a class="anchor-link right" href="#import"><i class="icofont-laika">&#xef71;</i></a></h3>
+        <p>To import the standard (non-strict) spire policy:</p>
+        <pre><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">spire</span><span>.</span><span class="identifier">math</span><span>.*
+
+</span><span class="comment">// fundamental coulomb types and methods
+</span><span class="keyword">import</span><span> </span><span class="identifier">coulomb</span><span>.*
+</span><span class="keyword">import</span><span> </span><span class="identifier">coulomb</span><span>.</span><span class="identifier">syntax</span><span>.*
+
+</span><span class="comment">// algebraic definitions
+</span><span class="keyword">import</span><span> </span><span class="identifier">algebra</span><span>.</span><span class="identifier">instances</span><span>.</span><span class="identifier">all</span><span>.</span><span class="keyword">given</span><span>
+</span><span class="keyword">import</span><span> </span><span class="identifier">coulomb</span><span>.</span><span class="identifier">ops</span><span>.</span><span class="identifier">algebra</span><span>.</span><span class="identifier">spire</span><span>.</span><span class="identifier">all</span><span>.{*, </span><span class="keyword">given</span><span>}
+
+</span><span class="comment">// standard policy for spire and scala types
+</span><span class="keyword">import</span><span> </span><span class="identifier">coulomb</span><span>.</span><span class="identifier">policy</span><span>.</span><span class="identifier">spire</span><span>.</span><span class="identifier">standard</span><span>.</span><span class="keyword">given</span><span>
+</span><span class="keyword">import</span><span> </span><span class="identifier">scala</span><span>.</span><span class="identifier">language</span><span>.</span><span class="identifier">implicitConversions</span></code></pre>
+        <div class="callout info">
+          <i class="icofont-laika">&#xef4e;</i>
+          <p>Never import more than one <code>policy</code> at a time.
+          For example, if you import <code>coulomb.policy.spire.standard.given</code>,
+          do not also import <code>coulomb.policy.standard.given.</code></p>
+        </div>
+        
+        <h3 id="examples" class="section">examples<a class="anchor-link right" href="#examples"><i class="icofont-laika">&#xef71;</i></a></h3>
+        <pre><code class="nohighlight"><span class="keyword">import</span><span> </span><span class="identifier">coulomb</span><span>.</span><span class="identifier">units</span><span>.</span><span class="identifier">si</span><span>.{*, </span><span class="keyword">given</span><span>}
+</span><span class="keyword">import</span><span> </span><span class="identifier">coulomb</span><span>.</span><span class="identifier">units</span><span>.</span><span class="identifier">us</span><span>.{*, </span><span class="keyword">given</span><span>}
+
+</span><span class="comment">// coulomb-spire policies allow the use of spire and Scala types
+</span><span class="keyword">val</span><span> </span><span class="identifier">rq</span><span> = </span><span class="type-name">Rational</span><span>(</span><span class="number-literal">3</span><span>, </span><span class="number-literal">2</span><span>).</span><span class="identifier">withUnit</span><span>[</span><span class="type-name">Meter</span><span>]
+</span><span class="comment">// rq: Quantity[Rational, Meter] = 3/2
+</span><span class="keyword">val</span><span> </span><span class="identifier">bq</span><span> = </span><span class="type-name">BigDecimal</span><span>(</span><span class="number-literal">1</span><span>).</span><span class="identifier">withUnit</span><span>[</span><span class="type-name">Yard</span><span>]
+</span><span class="comment">// bq: Quantity[BigDecimal, Yard] = 1
+</span><span class="keyword">val</span><span> </span><span class="identifier">iq</span><span> = </span><span class="number-literal">1</span><span>.</span><span class="identifier">withUnit</span><span>[</span><span class="type-name">Meter</span><span>]
+</span><span class="comment">// iq: Quantity[Int, Meter] = 1
+</span><span>
+</span><span class="comment">// The standard policy supports implicit conversions of unit and value types
+</span><span class="identifier">rq</span><span> + </span><span class="identifier">bq</span><span> + </span><span class="identifier">iq</span><span>
+</span><span class="comment">// res0: Quantity[Rational, Meter] = 2134/625</span></code></pre>
+        
+        <h2 id="policies" class="section">Policies<a class="anchor-link right" href="#policies"><i class="icofont-laika">&#xef71;</i></a></h2>
+        <p>As with <code>coulomb-core</code>, the <code>coulomb-spire</code> package provides two predefined
+        <a href="concepts.html#coulomb-policies">policy</a>
+        options:</p>
+        <ul>
+          <li><code>coulomb.policy.spire.standard</code> - Supports implicit and explicit value and unit conversions, and value promotions for spire and Scala numeric types.</li>
+          <li><code>coulomb.policy.spire.strict</code> - Only explicit value and unit conversions are supported.</li>
+        </ul>
+        <p>The
+        <a href="concepts.html#value-promotion-and-resolution">value resolution</a>
+        and promotion rules for <code>coulomb-spire</code> are extended to
+        include <code>BigDecimal</code>, <code>BigInt</code>, <code>Rational</code>, <code>Algebraic</code> and <code>Real</code>.
+        The resulting lattice of promotions looks like this:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Promote From</th>
+              <th>To</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Int</td>
+              <td>Long</td>
+            </tr>
+            <tr>
+              <td>Long</td>
+              <td>BigInt</td>
+            </tr>
+            <tr>
+              <td>BigInt</td>
+              <td>Float</td>
+            </tr>
+            <tr>
+              <td>Long</td>
+              <td>Float</td>
+            </tr>
+            <tr>
+              <td>Float</td>
+              <td>Double</td>
+            </tr>
+            <tr>
+              <td>Double</td>
+              <td>BigDecimal</td>
+            </tr>
+            <tr>
+              <td>BigDecimal</td>
+              <td>Rational</td>
+            </tr>
+            <tr>
+              <td>Rational</td>
+              <td>Algebraic</td>
+            </tr>
+            <tr>
+              <td>Algebraic</td>
+              <td>Real</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="callout info">
+          <i class="icofont-laika">&#xef4e;</i>
+          <p>Remember that the promotions above are transitive,
+          and so <code>Int</code> promotes to <code>Real</code>, etc.</p>
+        </div>
+        <p>The definition of promotions for <code>coulomb-spire</code> can be browsed
+        <a href="https://www.javadoc.io/doc/com.manyangled/coulomb-docs_3/latest/coulomb/ops/resolution/spire$.html">here</a></p>
+
+        <hr style="margin-top: 30px"/>
+        <footer style="font-size: 90%; text-align: center">
+          coulomb is a <a href="https://typelevel.org/">Typelevel</a> project distributed under the <a href="https://www.apache.org/licenses/LICENSE-2.0.txt">Apache-2.0</a> license.
+        </footer>
+
+      </main>
+
+    </div>
+
+  </body>
+</html>
